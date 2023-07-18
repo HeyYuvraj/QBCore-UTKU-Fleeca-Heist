@@ -1,16 +1,4 @@
-QBCore = nil
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
+QBCore = exports['qb-core']:GetCoreObject()
 
 Freeze = {F1 = 0, F2 = 0, F3 = 0, F4 = 0, F5 = 0, F6 = 0}
 PlayerData = nil
@@ -51,79 +39,8 @@ function DrawText3D(x, y, z, text)
     ClearDrawOrigin()
 end
 
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
-
 function ShowTimer() SetTextFont(0) SetTextProportional(0) SetTextScale(0.42, 0.42) SetTextDropShadow(0, 0, 0, 0,255) SetTextEdge(1, 0, 0, 0, 255) SetTextEntry("STRING") AddTextComponentString("~r~"..UTK.timer.."~w~") DrawText(0.682, 0.96) end
 
---[[RegisterNetEvent("utk_fh:openDoor_c")
-AddEventHandler("utk_fh:openDoor_c", function(coords, method)
-    if method == 1 then
-        local obj = GetClosestObjectOfType(coords, 2.0, GetHashKey(UTK.vaultdoor), false, false, false)
-        local count = 0
-
-        repeat
-            local heading = GetEntityHeading(obj) - 0.10
-
-            SetEntityHeading(obj, heading)
-            count = count + 1
-            Citizen.Wait(10)
-        until count == 900
-    elseif method == 2 then
-        local obj = GetClosestObjectOfType(UTK.Banks.F4.doors.startloc.x, UTK.Banks.F4.doors.startloc.y, UTK.Banks.F4.doors.startloc.z, 2.0, UTK.Banks.F4.hash, false, false, false)
-        local count = 0
-        repeat
-            local heading = GetEntityHeading(obj) - 0.10
-
-            SetEntityHeading(obj, heading)
-            count = count + 1
-            Citizen.Wait(10)
-        until count == 900
-    elseif method == 3 then
-        local obj = GetClosestObjectOfType(coords, 2.0, GetHashKey(UTK.door), false, false, false)
-
-        FreezeEntityPosition(obj, false)
-    elseif method == 4 then
-        local obj = GetClosestObjectOfType(coords, 2.0, GetHashKey(UTK.vaultdoor), false, false, false)
-        local count = 0
-
-        repeat
-            local heading = GetEntityHeading(obj) + 0.10
-
-            SetEntityHeading(obj, heading)
-            count = count + 1
-            Citizen.Wait(10)
-        until count == 900
-    elseif method == 5 then
-        local obj = GetClosestObjectOfType(UTK.Banks.F4.doors.startloc.x, UTK.Banks.F4.doors.startloc.y, UTK.Banks.F4.doors.startloc.z, 2.0, UTK.Banks.F4.hash, false, false, false)
-        local count = 0
-
-        repeat
-            local heading = GetEntityHeading(obj) + 0.10
-
-            SetEntityHeading(obj, heading)
-            count = count + 1
-            Citizen.Wait(10)
-        until count == 900
-    end
-end)]]
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
 
 RegisterNetEvent("QBCore:Client:OnJobUpdate")
 AddEventHandler("QBCore:Client:OnJobUpdate", function(job)
@@ -139,17 +56,6 @@ RegisterNetEvent("utk_fh:lootup_c")
 AddEventHandler("utk_fh:lootup_c", function(var, var2)
     LootCheck[var][var2] = true
 end)
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
-
 
 RegisterNetEvent("utk_fh:outcome")
 AddEventHandler("utk_fh:outcome", function(oc, arg)
@@ -171,16 +77,7 @@ end)
 
 RegisterNetEvent("utk_fh:startLoot_c")
 AddEventHandler("utk_fh:startLoot_c", function(data, name)
-    --local check = true
-    --[[while check do
-        local pedcoords = GetEntityCoords(PlayerPedId())
-        local dst = GetDistanceBetweenCoords(pedcoords, data.doors.startloc.x, data.doors.startloc.y, data.doors.startloc.z, true)
 
-        if dst < 50 or LootCheck[name].Stop then
-            check = false
-        end
-        Citizen.Wait(1000)
-    end]]
     currentname = name
     currentcoords = vector3(data.doors.startloc.x, data.doors.startloc.y, data.doors.startloc.z)
     if not LootCheck[name].Stop then
@@ -243,17 +140,6 @@ AddEventHandler("utk_fh:startLoot_c", function(data, name)
     end
 end)
 
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
-
-
-
 RegisterNetEvent("utk_fh:stopHeist_c")
 AddEventHandler("utk_fh:stopHeist_c", function(name)
     LootCheck[name].Stop = true
@@ -282,15 +168,6 @@ AddEventHandler("utk_fh:policenotify", function(name)
     end
 end)
 
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
 -- MAIN DOOR UPDATE --
 
 AddEventHandler("utk_fh:freezeDoors", function()
@@ -378,16 +255,6 @@ AddEventHandler("utk_fh:toggleDoor", function(key, state)
     Doors[key][1].locked = state
     dooruse = false
 end)
-
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
 
 RegisterNetEvent("utk_fh:toggleVault")
 AddEventHandler("utk_fh:toggleVault", function(key, state)
@@ -769,16 +636,6 @@ Citizen.CreateThread(function()
     end
 end)
 
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
-
-
 Citizen.CreateThread(function()
     while true do
         if startdstcheck then
@@ -816,19 +673,12 @@ Citizen.CreateThread(function()
                     local dst = GetDistanceBetweenCoords(coords, v.doors.startloc.x, v.doors.startloc.y, v.doors.startloc.z, true)
                     --local dst2 = GetDistanceBetweenCoords(coords, v.doors.lockpick.x, v.doors.lockpick.y, v.doors.lockpick.z, true)
 
-                    if dst <= 5 and not Check[k] then
+                    if dst <= 1.5 and not Check[k] then
                         DrawText3D(v.doors.startloc.x, v.doors.startloc.y, v.doors.startloc.z, "~g~E~w~ - Start bank heist", 0.40)
                         if dst <= 1 and IsControlJustReleased(0, 38) then
                             TriggerServerEvent("utk_fh:startcheck", k)
                         end
                     end
-                    --[[if dst2 <= 2 and not Check[k] then
-                        DrawText3D(v.doors.lockpick.x, v.doors.lockpick.y, v.doors.lockpick.z, "[~r~E~w~] Lockpick the door", 0.40)
-                        if dst <= 1 and IsControlJustReleased(0, 38) then
-                            Lockpick(k)
-                            --TriggerServerEvent("utk_fh:startcheck", k)
-                        end
-                    end]]
                 end
             end
         else
@@ -838,14 +688,6 @@ Citizen.CreateThread(function()
     end
 end)
 
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
 
 -- SEARCH FOR ID CARD UPDATE --
 
