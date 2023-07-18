@@ -1,12 +1,3 @@
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
 
 UTK = {}
 UTK.timer = 30 -- countdown to secure lock in seconds (time needed to pass to door to be closed back)
