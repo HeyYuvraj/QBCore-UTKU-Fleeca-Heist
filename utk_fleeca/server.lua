@@ -1,16 +1,4 @@
-QBCore = nil
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-
-
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---https://discord.gg/wQBuB3U5Ym - Dox Shop
---Made By UTK Converted To QBCore By Dox
+local QBCore = exports['qb-core']:GetCoreObject()
 
 Doors = {
     ["F1"] = {{loc = vector3(312.93, -284.45, 54.16), h = 160.91, txtloc = vector3(312.93, -284.45, 54.16), obj = nil, locked = true}, {loc = vector3(310.93, -284.44, 54.16), txtloc = vector3(310.93, -284.44, 54.16), state = nil, locked = true}},
