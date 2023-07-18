@@ -13,7 +13,8 @@ Original ESX Version: https://github.com/utkuali/Fleeca-Bank-Heists/tree/master
 2. Extract the files into the resources folder.
 3. Ensure them in server.cfg 
 
-
+## Showcase
+https://www.youtube.com/watch?v=fVEgom3TmG0
     
 ## Authors
 
