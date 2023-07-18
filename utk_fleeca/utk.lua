@@ -1,7 +1,9 @@
 
 UTK = {}
-UTK.timer = 30 -- countdown to secure lock in seconds (time needed to pass to door to be closed back)
+UTK.timer = 180 -- countdown to secure lock in seconds (time needed to pass to door to be closed back)
 UTK.hacktime = 1000 -- first door open delay to make time for police to arrive and roleplay in miliseconds (I highly recommend to leave it be (2.5 min default))
+-- Total Cash Bundles in 1 Tray = 45
+-- Total Tray in 1 Bank = 3
 UTK.maxcash = 7500 -- maximum amount of cash a pile can hold
 UTK.mincash = 3000 -- minimum amount of cash a pile holds
 UTK.black = false -- enable this if you want blackmoney as a reward
@@ -10,6 +12,9 @@ UTK.mincops = 0 -- minimum required cops to start mission
 UTK.vaultdoor = "v_ilev_gb_vauldr"
 UTK.door = "v_ilev_gb_vaubar"
 UTK.office = "v_ilev_gb_teldr"
+UTK.RequiredItem1 = "security_card_01"
+UTK.RequiredItem2 = "security_card_02"
+
 UTK.Banks = {
     F1 = {
         doors = {

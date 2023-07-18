@@ -23,14 +23,14 @@ AddEventHandler("utk_fh:startcheck", function(bank)
         end
     end
     local xPlayer = QBCore.Functions.GetPlayer(_source)
-    local item = xPlayer.Functions.GetItemByName("security_card_01", 1)
+    local item = xPlayer.Functions.GetItemByName(UTK.RequiredItem1, 1)
 
     if copcount >= UTK.mincops then
         if item ~= nil then
             if not UTK.Banks[bank].onaction == true then
                 if (os.time() - UTK.cooldown) > UTK.Banks[bank].lastrobbed then
                     UTK.Banks[bank].onaction = true
-                    xPlayer.Functions.RemoveItem("security_card_01", 1)
+                    xPlayer.Functions.RemoveItem(UTK.RequiredItem1, 1)
                     TriggerClientEvent("utk_fh:outcome", _source, true, bank)
                     TriggerClientEvent("utk_fh:policenotify", -1, bank)
                 else
@@ -114,10 +114,10 @@ end)
 
 QBCore.Functions.CreateCallback("utk_fh:checkSecond", function(source, cb)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    local item = xPlayer.Functions.GetItemByName("security_card_02", 1)
+    local item = xPlayer.Functions.GetItemByName(UTK.RequiredItem2, 1)
 
     if item ~= nil then
-        xPlayer.Functions.RemoveItem("security_card_02", 1)
+        xPlayer.Functions.RemoveItem(UTK.RequiredItem2, 1)
         cb(true)
     else
         cb(false)
