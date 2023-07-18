@@ -1,18 +1,24 @@
-# QBCore-UTKU-Fleeca-Heist
 
-Original Post
-https://forum.cfx.re/t/esx-fleeca-bank-heists/1352598
+# QBCore Fleeca Bank Robbery Script
 
-My Discord:
-https://discord.gg/wQBuB3U5Ym
+The QBCore Fleeca Bank Robbery Script allows players to perform a bank robbery in the Fleeca Banks. Players must obtain Security Cards 1 and 2 to successfully hack the bank's security system. Additionally, players can collect note bundles from the trays located in the bank's locker.
 
-Preview:
-https://streamable.com/nuquba
+Original ESX Version: https://github.com/utkuali/Fleeca-Bank-Heists/tree/master
+## Installation
 
-Make sure to start taskbar - OR ELSE WONT WORK
+1. Remove the QBCore Fleeca bank door locks:
+- Navigate to the `qb-doorlock` resource.
+- Open the `config.lua` file.
+- Delete the code between `Line 129 and 178`.
+2. Extract the files into the resources folder.
+3. Ensure them in server.cfg 
 
 
+    
+## Authors
+
+- [@utkuali](https://github.com/utkuali) - Original creator of the script.
+- [@Doxthehuman](https://github.com/Doxthehuman) - Conversion of the script to QBCore.
+- [@HeyYuvraj](https://github.com/HeyYuvraj) - Current maintainer of the script.
 
 
-
-Make sure to remove fleeca banks doorlock @ qb-doorlock/config.lua Line:1090-1178
